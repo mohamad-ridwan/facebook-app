@@ -1,0 +1,234 @@
+@import '../../utils/variable.scss';
+
+.navbar{
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 3.7rem;
+    padding: 0 1rem;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2);
+    z-index: 9999;
+
+    .overlay-search{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: fit-content;
+        width: 19rem;
+        padding: 0 0.5rem 0.5rem 0;
+        background-color: #fff;
+        border-radius: 5px;
+        opacity: 0;
+        box-shadow: 0 2px 15px -1px rgba(0,0,0,0.3);
+        z-index: 1;
+        animation: fadeSearch 0.2s ease-out forwards;
+
+        .circle-back-search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 2.5rem;
+            width: 2.5rem;
+            margin: 0.7rem 0 0 1rem;
+            background: transparent;
+            border-radius: 500px;
+            transition: 0.2s ease-out;
+            cursor: pointer;
+            &:hover{
+                background-color: $bgLogin;
+            }
+
+            i{
+                color: $colorTitleInputSelect;
+                font-size: 1.15rem;
+            }
+        }
+
+        span{
+            text-align: start;
+            font-size: 1em;
+            font-weight: 500;
+            margin: 1rem 1.8rem 0.5rem 1rem;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            margin-left: 0.5rem;
+            li{
+                display: flex;
+                list-style: none;
+            }
+        }
+    }
+
+    .menu-left{
+        display: flex;
+        align-items: center;
+
+        .logo-facebook{
+            height: 2.5rem;
+            width: 2.5rem;
+            background: transparent;
+            margin-right: 0.6rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            overflow: hidden;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .search-input{
+            display: flex;
+            position: relative;
+            align-items: center;
+
+            .search{
+                padding: 0.7rem 1rem 0.7rem 2.2rem;
+                border: none;
+                outline: none;
+                border-radius: 500px;
+                background: $bgLogin;
+                font-size: 0.95rem;
+                color: $blackColorTxt;
+                z-index: 2;
+                &::placeholder{
+                    font-weight: 400;
+                }
+            }
+
+            i{
+                position: absolute;
+                left: 0;
+                z-index: 3;
+                padding: 1px;
+                margin-left: 0.6rem;
+                color: $colorTitleInputSelect;
+            }
+        }
+    }
+
+    .menu-page{
+        display: flex;
+        width: 100%;
+        max-width: 400px;
+        justify-content: center;
+        margin-left: -2.5rem;
+        height: auto;
+
+        .m-page{
+            display: flex;
+            list-style: none;
+            cursor: pointer;
+            justify-content: center;
+            margin-left: 1rem;
+            width: 7rem;
+            background: transparent;
+            color: $colorTitleInputSelect;
+            transition: 0.2s ease-out;
+            overflow: hidden;
+            align-items: center;
+
+            i{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                height: 85%;
+                width: 100%;
+                font-size: 1.1rem;
+                border-radius: 5px;
+                overflow: hidden;
+                &:hover{
+                    background: $bgLogin;
+                }
+            }
+        }
+
+        .m-page-active{
+            color: $colorBlue;
+            border-radius: 0;
+            border-bottom: 0.2rem solid $colorBlue;
+            transition: 0.1s ease-out;
+            &:hover{
+                background: transparent;
+                i{
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    .menu-right{
+        display: flex;
+        align-items: center;
+
+        li{
+            display: flex;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 500px;
+            cursor: pointer;
+            overflow: hidden;
+            background: $bgLogin;
+            transition: 0.2s ease-out;
+            margin-left: 0.6rem;
+            &:hover{
+                background: $colorBorder;
+                img{
+                    opacity: 0.9;
+                }
+            }
+            i{
+                font-size: 1rem;
+                opacity: 1;
+                color: $blackColorTxt;
+                margin: auto auto;
+            }
+            .notif-number{
+                display: flex;
+                position: absolute;
+                height: 1.2rem;
+                width: 1.2rem;
+                background-color: #FA383E;
+                font-size: 0.75rem;
+                color: #fff;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                margin: -0.2rem 0 0rem 1.5rem;
+            }
+            img{
+                width: 100%;
+                object-fit: cover;
+                opacity: 1;
+            }
+        }
+        .menu-right-icon-active{
+            background: $colorYoungBlue;
+            &:hover{
+                background: $colorYoungBlue;
+                .icon-active{
+                    color: $colorBlue;
+                }
+            }
+            .icon-active{
+                color: $colorBlue;
+            }
+        }
+    }
+}
+
+@keyframes fadeSearch {
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,69 @@
+@import '../../../utils/variable.scss';
+
+.post-audience{
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.529);
+    animation: fadeSignUp 0.4s ease-out forwards;
+    opacity: 0;
+
+    .cont-post-audience{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        overflow-y: auto;
+        padding: 2.8rem 1rem;
+
+        .white-post-audience{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: fit-content;
+            // min-height: 30rem;
+            background-color: #fff;
+            padding-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px -1px rgba(0, 0, 0, 0.3);
+
+            .title-post-adc{
+                display: flex;
+                font-weight: 500;
+                font-size: 1.1rem;
+                text-align: start;
+                padding: 1rem;
+                color: $blackColorTxt;
+            }
+
+            .desk-post-adc{
+                text-align: start;
+                color: $colorTitleInputSelect;
+                padding: 0 1rem;
+                font-weight: 300;
+                font-size: 0.95rem;
+
+                b{
+                    font-weight: 400;
+                }
+            }
+
+            .choose-public-or-friends{
+                display: flex;
+                flex-direction: column;
+                padding: 0 0.5rem;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+@keyframes fadeSignUp {
+    to{
+        opacity: 1;
+    }
+}

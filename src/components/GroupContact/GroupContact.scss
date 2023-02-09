@@ -1,0 +1,18 @@
+@import '../../utils/variable.scss';
+
+.wrapp-group-contact{
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    left: 0;
+    height: auto;
+    min-height: 85vh;
+    padding: 0 1rem 0 1rem;
+
+    .group-contact{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

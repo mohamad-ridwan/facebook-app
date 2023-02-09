@@ -1,0 +1,31 @@
+@import '../../utils/variable.scss';
+
+.label-select{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+
+    .select-input-card{
+        border: 1px solid $colorBorder;
+        border-radius: 5px;
+        padding: 0.5em;
+        font-size: 0.9em;
+        color: $blackColorTxt;
+        width: 100%;
+        outline: none;
+    }
+
+    .error-select-input-card{
+        border: 1px solid red;
+    }
+
+    i{
+        display: none;
+        position: absolute;
+        right: 0.3em;
+        color: $blackColorTxt;
+    }
+}

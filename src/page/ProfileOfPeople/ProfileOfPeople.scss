@@ -1,0 +1,27 @@
+@import '../../utils/variable.scss';
+
+.wrapp-profile-of-ppl{
+    display: flex;
+    width: 100%;
+    padding: 0rem 1rem 10rem 2rem;
+
+    .left-profile-of-ppl{
+        display: flex;
+        // flex-direction: column;
+        height: fit-content;
+        width: 40%;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1.5px 2px -1px rgba(0,0,0,0.3);
+        margin-top: 1rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .right-profile-of-ppl{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 60%;
+        padding: 0rem 1rem 1rem 1rem;
+    }
+}

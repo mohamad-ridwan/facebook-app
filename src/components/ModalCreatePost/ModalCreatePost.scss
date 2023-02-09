@@ -1,0 +1,192 @@
+@import '../../utils/variable.scss';
+
+.modal-create-post {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.529);
+    animation: fadeSignUp 0.4s ease-out forwards;
+    opacity: 0;
+
+    .con-white-create-post {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        overflow-y: auto;
+        padding: 4rem 1rem;
+
+        .white-create-post {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: fit-content;
+            min-height: 30rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px -1px rgba(0, 0, 0, 0.3);
+
+            .author {
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+
+                .img-author {
+                    height: 2.7rem;
+                    width: 2.7rem;
+                    border-radius: 500px;
+                    object-fit: cover;
+                    margin-right: 0.8rem;
+                }
+
+                .name-author{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    span{
+                        display: flex;
+                        text-align: start;
+                        font-weight: 500;
+                        font-size: 0.95rem;
+                    }
+
+                    button{
+                        display: flex;
+                        padding: 0.35rem 0.5rem;
+                        background: $bgLogin;
+                        color: $blackColorTxt;
+                        width: fit-content;
+                        align-items: center;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        margin-top: 0.3rem;
+                        font-family: $fontFamily;
+                        transition: 0.2s ease-out;
+                        &:hover{
+                            background: $colorChatGray;
+                        }
+
+                        .icon-down{
+                            font-size: 0.65rem;
+                            margin-top: -0.4rem;
+                        }
+
+                        i{
+                            font-size: 0.7rem;
+                        }
+
+                        .status-author{
+                            display: flex;
+                            font-size: 0.75rem;
+                            font-weight: 500;
+                            margin: 0 0.3rem;
+                        }
+                    }
+                }
+            }
+
+            .input-post{
+                display: flex;
+                resize: none;
+                margin: 0 1rem;
+                border: none;
+                outline: none;
+                font-family: $fontFamily;
+            }
+
+            .add-photos{
+                display: flex;
+                height: 12.5rem;
+                width: auto;
+                margin: 1rem 1rem 0 1rem;
+                border-radius: 8px;
+                border: 1px solid $colorChatGrayHover;
+                padding: 0.5rem;
+
+                .cont-photo-result{
+                    position: relative;
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    background: $bgLogin;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+
+                    .photo-result{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    .change-or-cancel{
+                        display: flex;
+                        height: fit-content;
+                        position: absolute;
+                        top: 0rem;
+                        left: 0rem;
+                        z-index: 9;
+                        align-items: center;
+                    }
+
+                    .btn-add-photos{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: $fontFamily;
+                        font-weight: 500;
+                        transition: 0.2s ease-out;
+                        z-index: 1;
+                        border: none;
+                        outline: none;
+                        border-radius: 8px;
+                        &:hover{
+                            background: $colorChatGray;
+                        }
+
+                        i{
+                            display: flex;
+                            height: 2.5rem;
+                            width: 2.5rem;
+                            border-radius: 500px;
+                            justify-content: center;
+                            align-items: center;
+                            background: $colorChatGrayHover;
+                            color: $blackColorTxt;
+                            font-size: 1rem;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        span{
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .input-img-post{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeSignUp {
+    to{
+        opacity: 1;
+    }
+}

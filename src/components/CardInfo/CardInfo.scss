@@ -1,0 +1,115 @@
+@import '../../utils/variable.scss';
+
+.card-info{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.2s ease-out;
+    padding: 0 0.3rem;
+    &:hover{
+        background: #DADDE1;
+    }
+
+    .circle-notif{
+        display: none;
+        position: absolute;
+        right: 1rem;
+        height: 0.75rem;
+        width: 0.75rem;
+        border-radius: 100%;
+        background: $colorBlueTwo;
+    }
+
+    .img-info{
+        display: flex;
+        position: relative;
+        height: 2.8rem;
+        width: 2.8rem;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        i{
+            font-size: 1.1rem;
+        }
+
+        .notif-message{
+            display: flex;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 1rem;
+            width: 1rem;
+            font-size: 0.6rem;
+            background: $colorRed;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
+
+        img{
+            height: 2.3rem;
+            width: 2.3rem;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+
+        span{
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            background: green;
+            height: 0.5rem;
+            width: 0.5rem;
+            border-radius: 500px;
+            border: 3px solid $bgLogin;
+            z-index: 1;
+        }
+    }
+
+    .name-info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0.8em;
+
+        p{
+            color: $blackColorTxt;
+            font-size: 1em;
+            text-align: start;
+            font-weight: 500;
+        }
+
+        span{
+            display: none;
+            margin-top: 0.2em;
+            text-align: start;
+            font-size: 0.85em;
+            color: $blackColorTxt;
+        }
+
+        .button-info{
+            display: none;
+            align-items: center;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+.choose-post-audience{
+    &:hover{
+        background: $bgLogin;
+    }
+}
+.choose-post-audience-active{
+    background: $colorYoungBlue;
+    &:hover{
+        background: $colorYoungBlue;
+    }
+}

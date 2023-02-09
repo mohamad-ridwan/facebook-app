@@ -1,0 +1,18 @@
+@import '../../utils/variable.scss';
+
+.wrapp-home{
+    display: flex;
+    background: $bgLogin;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+
+    .home{
+        display: flex;
+        width: 100%;
+        max-width: 40%;
+        justify-content: space-between;
+    }
+}

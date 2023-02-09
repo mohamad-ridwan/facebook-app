@@ -1,0 +1,31 @@
+@import '../../../utils/variable.scss';
+
+.section-edit-pf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    overflow: hidden;
+
+    h1{
+        font-size: 1.25rem;
+    }
+
+    button{
+        font-size: 0.95rem;
+        color: $colorBlue;
+        padding: 0.6rem;
+        border-radius: 3px;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover{
+            background: $bgLogin;
+        }
+    }
+
+    .input-edit-pf{
+        display: none;
+    }
+}

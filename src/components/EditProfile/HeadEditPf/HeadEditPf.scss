@@ -1,0 +1,39 @@
+@import '../../../utils/variable.scss';
+
+.head-edit-pf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid $colorBorder;
+    padding: 1.3rem;
+    overflow: hidden;
+
+    h1{
+        font-size: 1.25rem;
+    }
+
+    button{
+        display: flex;
+        right: 1rem;
+        position: absolute;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 500px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: $colorChatGray;
+        color: $colorTitleInputSelect;
+        transition: 0.2s ease-out;
+        &:hover{
+            background: $colorChatGrayHover;
+        }
+
+        i{
+            font-size: 1.4rem;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import '../../../utils/variable.scss';
+
+.name-info-edit-pf{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+
+    .attribute-name-info-edit-pf{
+        display: flex;
+        align-items: center;
+
+        .icon-info-edit-pf{
+            width: 1.35rem;
+            i{
+                font-size: 1rem;
+                color: $colorTitleInputSelect;
+                padding: 0.1rem;
+                margin-top: 0.3rem;
+            }
+        } 
+    
+        span{
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-left: 0.7rem;
+            cursor: default;
+        }
+    }
+}

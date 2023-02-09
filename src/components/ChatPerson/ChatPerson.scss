@@ -1,0 +1,194 @@
+@import '../../utils/variable.scss';
+
+.chat-person{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0rem;
+    height: 26rem;
+    right: 6rem;
+    width: 20rem;
+    background: #fff;
+    box-shadow: 0 2px 15px -1px rgba(0,0,0,0.3);
+    z-index: 9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+
+    .chat-bar{
+        display: flex;
+        position: absolute;
+        top: 0;
+        background: #fff;
+        left: 0;
+        right: 0;
+        height: 2.5rem;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 0.5rem;
+        box-shadow: 0 1px 5px -1px rgba(0,0,0,0.3);
+
+        .person{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+            &:hover{
+                color: $colorBlue;
+            }
+
+            img{
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 500px;
+                object-fit: cover;
+            }
+    
+            span{
+                font-size: 0.95rem;
+                font-weight: 500;
+                margin-left: 0.5rem;
+            }
+        }
+
+        button{
+            display: flex;
+            background: transparent;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            align-items: center;
+            margin-right: 0.2rem;
+            border-radius: 500px;
+            padding: 0.5em 0.8em;
+            transition: all 0.2s ease-out;
+            &:hover{
+                background: $colorYoungBlue;
+            }
+            i{
+                font-size: 1.2rem;
+                color: $colorBlue;
+            }
+        }
+    }
+
+    .chat-body{
+        display: flex;
+        overflow-y: auto;
+        margin: 3.5rem 0 3.5rem 0;
+        justify-content: center;
+
+        .body{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            min-height: 300px;
+            padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+            overflow-y: auto;
+
+            .comment-person{
+                list-style: none;
+                display: flex;
+                margin: 0rem 0;
+
+                p{
+                    display: flex;
+                    text-align: start;
+                    font-size: 0.95rem;
+                    width: fit-content;
+                    max-width: 70%;
+                    padding: 0.7rem 0.96rem;
+                    background-color: $colorChatBlue;
+                    border-radius: 10px;
+                    color: #fff;
+                    margin: 0.3rem 0;
+                }
+
+                .msg-user-unfriends{
+                    font-size: 0.8rem;
+                    max-width: 80%;
+                    text-align: center;
+                    margin: 0.3rem auto;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .to-bottom{
+            display: flex;
+            position: fixed;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 500px;
+            justify-content: center;
+            align-items: center;
+            color: $colorBlue;
+            background: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.2s ease-out;
+            box-shadow: 0 4px 10px -1px rgba(0,0,0,0.3);
+            bottom: 5.5rem;
+            &:hover{
+                background: $colorYoungBlue;
+            }
+
+            i{
+                font-size: 1.1rem;
+            }
+        }
+    }
+    
+    .type-chat{
+        display: flex;
+        position: absolute;
+        bottom: 0.1rem;
+        left: 0;
+        right: 0;
+        background: #fff;
+        justify-content: space-between;
+        height: fit-content;
+        overflow: hidden;
+        padding: 0.5rem 0.5rem;
+        z-index: 11;
+
+        input{
+            text-align: start;
+            padding: 0.7rem 1rem;
+            outline: none;
+            background: $bgLogin;
+            border-radius: 500px;
+            width: 75%;
+            font-size: 0.9rem;
+            outline: none;
+            border: none;
+        }
+
+        button{
+            display: flex;
+            align-items: center;
+            border: none;
+            outline: none;
+            color: $colorBlue;
+            border-radius: 500px;
+            cursor: pointer;
+            background: none;
+            height: 2.2rem;
+            width: 2.2rem;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0.5em;
+            transition: all 0.2s ease-out;
+            &:hover{
+                background: $colorYoungBlue;
+            }
+
+            i{
+                margin-right: 0.1em;
+            }
+        }
+    }
+}

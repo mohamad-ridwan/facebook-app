@@ -1,0 +1,2 @@
+export const TOKEN_SECRET_APP = process.env.REACT_APP_TOKEN_SECRET_APP
+export const API_ENDPOINT_LOCAL = process.env.REACT_APP_ENDPOINT_BACKEND_LOCAL

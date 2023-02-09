@@ -1,0 +1,37 @@
+@import '../../utils/variable.scss';
+
+.wrapp-open-create-post{
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 1.5px 2px -1px rgba(0,0,0,0.3);
+    padding: 0.8rem 1rem;
+    background: #fff;
+    align-items: center;
+
+    .img-upload-pf{
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 500px;
+        object-fit: cover;
+        margin-right: 0.5rem;
+    }
+
+    .open-create-post{
+        display: flex;
+        padding: 0.7rem 1rem;
+        background: $bgLogin;
+        border-radius: 500px;
+        color: $colorTitleInputSelect;
+        font-size: 0.95rem;
+        font-weight: 500;
+        width: 90%;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        align-items: center;
+        transition: 0.2s ease-out;
+        &:hover{
+            background: $colorChatGray;
+        }
+    }
+}

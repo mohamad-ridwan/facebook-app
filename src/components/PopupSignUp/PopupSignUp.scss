@@ -1,0 +1,82 @@
+@import '../../utils/variable.scss';
+
+// pop-up sign up
+.wrapp-popup-sign-up{
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    height: 100%;
+    min-height: 600px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.529);
+    animation: fadeSignUp 0.4s ease-out forwards;
+    opacity: 0;
+
+    .popup-sign-up{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        max-width: 450px;
+        background-color: #fff;
+        padding-bottom: 1.7rem;
+        margin: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px -1px rgba(0,0,0,0.4);
+
+        .close-icon-sign-up{
+            position: absolute;
+            top: 1rem;
+            right: 0.9rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        h1{
+            text-align: start;
+            padding: 0.9rem 0.9rem 0.3rem 0.9rem;
+            font-size: 1.8rem;
+        }
+
+        span{
+            font-size: 14px;
+            text-align: start;
+            padding: 0 0.9rem;
+            color: $colorTitleInputSelect;
+        }
+        hr{
+            border-top: 1px solid $colorBorder;
+            margin: 1rem 0;
+        }
+
+        .name-sign-up{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.9rem;
+        }
+    
+        .col-input-sign-up{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5em;
+        }
+
+        .title-input-sign-up{
+            font-size: 0.78em;
+            color: $colorTitleInputSelect;
+            margin-top: 0.3em;
+            margin-bottom: 0.2em;
+        }
+    }
+}
+
+@keyframes fadeSignUp {
+    to{
+        opacity: 1;
+    }
+}

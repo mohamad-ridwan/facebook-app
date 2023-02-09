@@ -1,0 +1,21 @@
+@mixin tablet{
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+.wrapp-container-card{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    .container-card{
+        display: flex;
+        width: 100%;
+        max-width: 900px;
+        padding: 0 1.5rem;
+        overflow: hidden;
+    }
+}

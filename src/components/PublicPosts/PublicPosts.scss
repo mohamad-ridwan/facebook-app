@@ -1,0 +1,15 @@
+@import '../../utils/variable.scss';
+
+.wrapp-public-posts{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .public-posts{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 600px;
+        padding-bottom: 1rem;
+    }
+}
